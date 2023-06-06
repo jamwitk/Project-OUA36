@@ -8,7 +8,7 @@ Takım Unity 36
 - Beyza Nur Bayrakdaroğlu: Scrum Master / Product Owner
 - Jamshid Abdukarimov: Developer
 - Tamer Molla: Developer
-- Hasan Hüseyin Özkül: 3D Artist / Developer
+- Hasan Hüseyin Özkul: 3D Artist / Developer
 - Havva Çetinkaya: 3D Artist
 
 ## Ürün İsmi
