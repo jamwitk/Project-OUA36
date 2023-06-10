@@ -15,11 +15,11 @@ public class PlayerMovement : MonoBehaviour
 	{
 		if (Input.GetKey(KeyCode.W))
 		{
-			playerRigid.velocity = transform.forward * walk_speed * Time.deltaTime;
+			playerRigid.velocity = transform.forward * (walk_speed * Time.fixedDeltaTime);
 		}
 		if (Input.GetKey(KeyCode.S))
 		{
-			playerRigid.velocity = -transform.forward * walkb_speed * Time.deltaTime;
+			playerRigid.velocity = -transform.forward * (walkb_speed * Time.fixedDeltaTime);
 		}
 	}
 	void Update()
