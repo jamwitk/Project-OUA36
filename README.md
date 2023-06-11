@@ -15,9 +15,6 @@ Takım Unity 36
 
 --Scrap App--
 
-## Product Backlog URL
-
-
 ## Ürün Açıklaması
 
 
