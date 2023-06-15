@@ -21,10 +21,9 @@ Takım Unity 36/ WEZARD
 
 
 ## Ürün Özellikleri
-
--    
+    
 ## Hedef Kitle
-Macera oyunu severler ve oyunlarda bulmacalar çözmeye ilgi duyanlar, büyü ve büyücü konseptleri hoşuna giden oyun sever herkese hitap eden bir oyundur.
+Her yaşta macera oyunlarına ve oyunlarda bulmacalar çözmeye ilgi duyanlar, büyü ve büyücü konseptleri hoşuna giden oyun sever herkese hitap eden bir oyundur.
 
 
 ## Juriye Not
@@ -33,3 +32,19 @@ Macera oyunu severler ve oyunlarda bulmacalar çözmeye ilgi duyanlar, büyü ve
 https://miro.com/app/board/uXjVMAhbbRE=/
 
 ---
+Sprint 1
+Sprint Notları:Product backlogların içerisinde user storyler okunabilmektedir.
+
+Sprint içinde tamamlanması tahmin edilen puan: 100 Puan 
+
+Puan Tamamlama Mantığı: Toplamda proje boyunca 300 puanlık backlog bulunmaktadır. İlk sprint için tamamlanmasını beklediğimiz backlog 100 puanlıktır.
+
+Backlog düzeni ve Story seçimleri: Backlogda ilk olarak önemli olan işlerimizi yapmaya başladık ve ilerledikçe eklemek istediklerimizi yazdık. Bu şekilde ilk seçilenlerle tahmin edilen bir puan oluşturduk ve süreçte bu şekilde ilerledik.
+
+Daily Scrum: Daily Scrum toplantılarımız genel olarak Discord ve Whatsapp üzerinden zamansal sebeplerden dolayı hem sesli hem mesaj olarak süreç boyunca ilerlemiştir.
+Ürün Durumu: Ekran görüntüleri:
+
+
+Sprint Review: 
+
+Sprint Retrospective:
