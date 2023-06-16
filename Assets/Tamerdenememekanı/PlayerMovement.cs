@@ -10,6 +10,9 @@ public class PlayerMovement : MonoBehaviour
 	public bool walking;
 	public Transform playerTrans;
 
+	public float Health;
+
+
 
 	void FixedUpdate()
 	{
@@ -24,6 +27,11 @@ public class PlayerMovement : MonoBehaviour
 	}
 	void Update()
 	{
+		if(Health<=0)
+        {
+			Checkpoint.dead = true;
+        }
+
 		if (Input.GetKeyDown(KeyCode.W))
 		{
 			playerAnim.SetTrigger("walk");
@@ -60,19 +68,20 @@ public class PlayerMovement : MonoBehaviour
 			
 			//steps1.SetActive(false);
 		}
+
 		
-		if (walking == true)
-		{
+		
 			if (Input.GetKeyDown(KeyCode.LeftShift))
 			{
-				
+			if (walking == true)
+			{
 				walk_speed = run_speed;
 				playerAnim.SetTrigger("run");
 				playerAnim.ResetTrigger("walk");
 				playerAnim.ResetTrigger("idle");
 				playerAnim.ResetTrigger("walkback");
 
-
+			}
 			}
 			if (Input.GetKeyUp(KeyCode.LeftShift))
 			{
@@ -86,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
 			}
 		}
 
-	}
+	
     private void LateUpdate()
     {
 		if (Input.GetKey(KeyCode.A))
@@ -99,4 +108,12 @@ public class PlayerMovement : MonoBehaviour
 			playerTrans.rotation *= Quaternion.Euler(0, rotate_speed * Time.deltaTime, 0);
 		}
 	}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag=="bullet")
+        {
+			this.Health -= 10;
+        }
+    }
 }
