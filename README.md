@@ -36,8 +36,10 @@ Her yaşta macera oyunlarına ve oyunlarda bulmacalar çözmeye ilgi duyanlar, b
 https://miro.com/app/board/uXjVMAhbbRE=/
 
 ---
-Sprint 1
---- 
+## Sprint Board Update
+
+<img src="https://github.com/jamwitk/Project-OUA36/assets/119537892/0c90a845-b3c9-4c11-8a6c-3a2792c785d1" alt="alt text" width="800" height="600">
+
 ## Sprint Notları:
 Product backlogların içerisinde user storyler okunabilmektedir.
 
@@ -55,7 +57,6 @@ Daily Scrum toplantılarımız genel olarak Discord ve Whatsapp üzerinden zaman
 ## Ürün Durumu: 
 Ekran görüntüleri:
 ![image](Screenshots/SP1_Gameplay.png) ![image](Screenshots/SP1_Gameplay_2.png)  <img src="https://github.com/jamwitk/Project-OUA36/assets/119537892/f8364a65-4552-4ffd-aee4-9f8d0137e055" alt="alt text" width="500" height="350"> <img src="https://github.com/jamwitk/Project-OUA36/assets/119537892/ca2987a3-df57-42f3-afc7-d816254add1e" alt="alt text" width="500" height="350">
-
 
 ## Sprint Review: 
 Oyun konusu, hikayesi, ara sahneler, karakterler belirlendi.büyücü modeli yapıldı, büyü kitabı modeli ve animasyonu bitti. Oyun içerisinde level design oluşturulmaya başlandı, karakterin hareketleri sağlandı. Katılımcılar: Tüm ekip
