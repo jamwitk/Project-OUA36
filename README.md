@@ -50,7 +50,7 @@ Daily Scrum toplantılarımız genel olarak Discord ve Whatsapp üzerinden zaman
  https://docs.google.com/document/d/15d6q0cZefiA-DUNQPOYKELL8HnMiQj-_/edit?usp=sharing&ouid=102302724524538820380&rtpof=true&sd=true
 ## Ürün Durumu: 
 Ekran görüntüleri:
-****resimler***
+![image](Screenshots/SP1_Gameplay.png) ![image](Screenshots/SP1_Gameplay_2.png)
 
 ## Sprint Review: 
 

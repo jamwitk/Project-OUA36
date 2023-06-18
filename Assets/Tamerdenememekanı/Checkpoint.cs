@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    
     Vector3 spawnpoint;
     public static bool dead = false;
+
     void Start()
     {
         spawnpoint = gameObject.transform.position;
@@ -18,16 +18,17 @@ public class Checkpoint : MonoBehaviour
         if (dead == true)
         {
             Respawn();
-
         }
+
         if (gameObject.transform.position.y <= -10f)
         {
             Respawn();
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag=="checkpoint")
+        if (other.gameObject.tag == "checkpoint")
         {
             spawnpoint = other.gameObject.transform.position;
         }
@@ -35,9 +36,7 @@ public class Checkpoint : MonoBehaviour
 
     void Respawn()
     {
-        
-            gameObject.transform.position = spawnpoint;
-            dead = false;
-        }
+        gameObject.transform.position = spawnpoint;
+        dead = false;
     }
-
+}
