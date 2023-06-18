@@ -17,7 +17,7 @@ WEZZY
 
 ## Ürün Açıklaması
 
-****, **adlı büyücümüz ormanda yaşayan ve artık büyücülük hayatındaki en üst kademe olan baş büyücülüğü için orman içerisinde bir yolculuğa çıkar. Bu yolculuklta büyücümüz bulmacalı kapılarla karşılaşacak, diğer baş büyücü olmak isteyen büyücülerle karşılacak ve daha bir çok macera onu bekleyecek. Bu eğlenceli ve maceralı yolun sonunda büyücümüz kitaba ulaşabilirse baş büyücü olmayı başaracaktır.
+Wezzy adlı büyücümüz ormanda yaşayan ve artık büyücülük hayatındaki en üst kademe olan baş büyücülüğü için orman içerisinde bir yolculuğa çıkar. Bu yolculuklta büyücümüz bulmacalı kapılarla karşılaşacak, diğer baş büyücü olmak isteyen büyücülerle karşılacak ve daha bir çok macera onu bekleyecek. Bu eğlenceli ve maceralı yolun sonunda büyücümüz kitaba ulaşabilirse baş büyücü olmayı başaracaktır.
 
 
 ## Ürün Özellikleri
@@ -60,4 +60,4 @@ Ekran görüntüleri:
 ## Sprint Review: 
 Oyun konusu, hikayesi, ara sahneler, karakterler belirlendi.büyücü modeli yapıldı, büyü kitabı modeli ve animasyonu bitti. Oyun içerisinde level design oluşturulmaya başlandı, karakterin hareketleri sağlandı. Katılımcılar: Tüm ekip
 ## Sprint Retrospective:
-2.spinte daha çok gayret ve çaba gösterlmesi kararı alındı, modelleme ve yazılım kısımlarında hızlanılması gerekildiği, günlük toplantılar için olabildiğince katılım sağlama, İş bölümlemelerinin daha dengeli olması konusunda kararlar verildi.
+2.spinte daha çok gayret ve çaba gösterlmesi kararı alındı, modelleme ve yazılım kısımlarında hızlanılması gerekildiği, günlük toplantılar için olabildiğince katılım sağlama, iş bölümlemelerinin daha dengeli olması, finaller yüzünden herkes çok odaklanamadığı için 2.sprit içerisinde bu açığımızı kapatmak üzerine kararlar alındı.
