@@ -13,7 +13,7 @@ Takım Unity 36/ WEZARD
 
 ## Ürün İsmi
 
---Scrap App--
+WEZZY
 
 ## Ürün Açıklaması
 
@@ -21,6 +21,10 @@ Takım Unity 36/ WEZARD
 
 
 ## Ürün Özellikleri
+Macera oyunu
+Bulmaca çözme
+Büyülü tema 
+Anlaşılabilir hikaye
     
 ## Hedef Kitle
 Her yaşta macera oyunlarına ve oyunlarda bulmacalar çözmeye ilgi duyanlar, büyü ve büyücü konseptleri hoşuna giden oyun sever herkese hitap eden bir oyundur.
@@ -50,8 +54,10 @@ Daily Scrum toplantılarımız genel olarak Discord ve Whatsapp üzerinden zaman
  https://docs.google.com/document/d/15d6q0cZefiA-DUNQPOYKELL8HnMiQj-_/edit?usp=sharing&ouid=102302724524538820380&rtpof=true&sd=true
 ## Ürün Durumu: 
 Ekran görüntüleri:
-![image](Screenshots/SP1_Gameplay.png) ![image](Screenshots/SP1_Gameplay_2.png)
+![image](Screenshots/SP1_Gameplay.png) ![image](Screenshots/SP1_Gameplay_2.png)  <img src="https://github.com/jamwitk/Project-OUA36/assets/119537892/f8364a65-4552-4ffd-aee4-9f8d0137e055" alt="alt text" width="500" height="350"> <img src="https://github.com/jamwitk/Project-OUA36/assets/119537892/ca2987a3-df57-42f3-afc7-d816254add1e" alt="alt text" width="500" height="350">
+
 
 ## Sprint Review: 
-
+Oyun konusu, hikayesi, ara sahneler, karakterler belirlendi.büyücü modeli yapıldı, büyü kitabı modeli ve animasyonu bitti. Oyun içerisinde level design oluşturulmaya başlandı, karakterin hareketleri sağlandı. Katılımcılar: Tüm ekip
 ## Sprint Retrospective:
+2.spinte daha çok gayret ve çaba gösterlmesi kararı alındı, modelleme ve yazılım kısımlarında hızlanılması gerekildiği, günlük toplantılar için olabildiğince katılım sağlama, İş bölümlemelerinin daha dengeli olması konusunda kararlar verildi.
