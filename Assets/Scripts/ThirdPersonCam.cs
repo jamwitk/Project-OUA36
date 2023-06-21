@@ -29,7 +29,7 @@ public class ThirdPersonCam : MonoBehaviour
         if(inputDir.magnitude > 0.1f)
         {
             playerObject.forward = Vector3.Slerp(playerObject.forward, inputDir.normalized, rotationSpeed * Time.deltaTime * rotationSpeed);
-            
+
         }
     }
 }

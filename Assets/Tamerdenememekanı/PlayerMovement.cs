@@ -1,118 +1,60 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Animator playerAnim;
-    public Rigidbody playerRigid;
-    public float walk_speed, walkb_speed, walks_speed, run_speed, rotate_speed;
-    public bool walking;
-    public Transform playerTrans;
+    public float movementSpeed;
+    public Transform orientation;
+    
+    private float _horizontalInput;
+    private float _verticalInput;
+    private Vector3 _moveDirection;
+    private Rigidbody _rb;
+    public float playerHeight;
+    public LayerMask groundMask;
+    public bool isGrounded;
+    public float groundDrag;
 
-    public float Health;
-
-
-    void FixedUpdate()
+    private void Start()
     {
-        if (Input.GetKey(KeyCode.W))
-        {
-            playerRigid.velocity = transform.forward * (walk_speed * Time.fixedDeltaTime);
-        }
-
-        if (Input.GetKey(KeyCode.S))
-        {
-            playerRigid.velocity = -transform.forward * (walkb_speed * Time.fixedDeltaTime);
-        }
+        _rb = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    private void Update()
     {
-        if (Health <= 0)
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.5f, groundMask);
+        
+        _horizontalInput = Input.GetAxis("Horizontal");
+        _verticalInput = Input.GetAxis("Vertical");
+
+        SpeedControl();
+        if (isGrounded)
         {
-            Checkpoint.dead = true;
+            _rb.drag = groundDrag;
         }
-
-        if (Input.GetKeyDown(KeyCode.W))
+        else
         {
-            playerAnim.SetTrigger("walk");
-            playerAnim.ResetTrigger("idle");
-            playerAnim.ResetTrigger("walkback");
-            playerAnim.ResetTrigger("run");
-            walking = true;
+            _rb.drag = 0;
         }
-
-        if (Input.GetKeyUp(KeyCode.W))
-        {
-            playerAnim.ResetTrigger("walk");
-            playerAnim.SetTrigger("idle");
-            playerAnim.ResetTrigger("walkback");
-            playerAnim.ResetTrigger("run");
-
-            walking = false;
-        }
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            playerAnim.SetTrigger("walkback");
-            playerAnim.ResetTrigger("idle");
-            playerAnim.ResetTrigger("walk");
-            playerAnim.ResetTrigger("run");
-        }
-
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            playerAnim.ResetTrigger("walkback");
-            playerAnim.SetTrigger("idle");
-            playerAnim.ResetTrigger("walk");
-            playerAnim.ResetTrigger("run");
-
-            //steps1.SetActive(false);
-        }
-
-
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            if (walking == true)
-            {
-                walk_speed = run_speed;
-                playerAnim.SetTrigger("run");
-                playerAnim.ResetTrigger("walk");
-                playerAnim.ResetTrigger("idle");
-                playerAnim.ResetTrigger("walkback");
-            }
-        }
-
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            walk_speed = walks_speed;
-            playerAnim.ResetTrigger("run");
-            playerAnim.SetTrigger("walk");
-
-            playerAnim.ResetTrigger("idle");
-            playerAnim.ResetTrigger("walkback");
-        }
+        
     }
 
-
-    private void LateUpdate()
+    private void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.A))
-        {
-            playerTrans.rotation *= Quaternion.Euler(0, -rotate_speed * Time.deltaTime, 0);
-        }
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            playerTrans.rotation *= Quaternion.Euler(0, rotate_speed * Time.deltaTime, 0);
-        }
+        _moveDirection = orientation.forward * _verticalInput + orientation.right * _horizontalInput;
+        
+        _rb.velocity = new Vector3(_moveDirection.x * movementSpeed, _rb.velocity.y, _moveDirection.z * movementSpeed);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void SpeedControl()
     {
-        if (other.gameObject.CompareTag("bullet"))
+        var flatVelocity = new Vector3(_rb.velocity.x, 0, _rb.velocity.z);
+        if (flatVelocity.magnitude > movementSpeed)
         {
-            this.Health -= 10;
+            var newVelocity = flatVelocity.normalized * movementSpeed;
+            _rb.velocity = new Vector3(newVelocity.x, _rb.velocity.y, newVelocity.z);
         }
     }
 }
