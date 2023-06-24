@@ -24,7 +24,7 @@ public class ThirdPersonCam : MonoBehaviour
 
         var horizontalInput = Input.GetAxis("Horizontal");
         var verticalInput = Input.GetAxis("Vertical");
-        var inputDir = -orientation.forward * horizontalInput + orientation.right * verticalInput;
+        var inputDir = orientation.forward * verticalInput + orientation.right * horizontalInput;
         
         if(inputDir.magnitude > 0.1f)
         {

@@ -12,10 +12,14 @@ public class PlayerMovement : MonoBehaviour
     private float _verticalInput;
     private Vector3 _moveDirection;
     private Rigidbody _rb;
+    public Animator _animator;
+    private bool _isGrounded;
+    
     public float playerHeight;
     public LayerMask groundMask;
-    public bool isGrounded;
     public float groundDrag;
+    
+    private static readonly int IsWalking = Animator.StringToHash("isWalking");
 
     private void Start()
     {
@@ -24,13 +28,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.5f, groundMask);
+        _isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.5f, groundMask);
         
         _horizontalInput = Input.GetAxis("Horizontal");
         _verticalInput = Input.GetAxis("Vertical");
-
+        
         SpeedControl();
-        if (isGrounded)
+        
+       
+        
+        
+        if (_isGrounded)
         {
             _rb.drag = groundDrag;
         }
@@ -39,6 +47,16 @@ public class PlayerMovement : MonoBehaviour
             _rb.drag = 0;
         }
         
+        //animaton
+        if(_horizontalInput != 0 || _verticalInput != 0)
+        {
+            _animator.SetBool(IsWalking, true);
+        }
+        else
+        {
+            _animator.SetBool(IsWalking, false);
+        }
+
     }
 
     private void FixedUpdate()
