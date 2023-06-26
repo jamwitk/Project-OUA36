@@ -10,7 +10,7 @@ public class ThirdPersonCam : MonoBehaviour
     public Transform playerObject;
     public Rigidbody rb;
     public float rotationSpeed;
-
+    public PlayerMovement playerMovement;
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
