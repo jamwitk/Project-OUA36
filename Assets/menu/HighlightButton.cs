@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 public class HighlightButton : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler
 {
     private Button pb;
+    
 
     void Start()
     {
@@ -20,4 +21,5 @@ public class HighlightButton : MonoBehaviour, IPointerExitHandler, IPointerEnter
     {
         pb.GetComponent<Image>().enabled = false;
     }
+    
 }
