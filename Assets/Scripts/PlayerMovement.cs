@@ -7,10 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement Settings")] public float movementSpeed;
     public float jumpForce;
-    public float jumpCooldown;
     public float airMultiplier;
     private bool _canJump = true;
-    private bool _isFalling;
 
     public Transform orientation;
     public Animator _animator;
@@ -36,7 +34,6 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         _isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, groundMask);
-        _isFalling = _rb.velocity.y < 0.1f;
         MyInput();
         SpeedControl();
 
@@ -82,16 +79,16 @@ public class PlayerMovement : MonoBehaviour
         {
             // Movement
             _rb.velocity = new Vector3(_moveDirection.x * movementSpeed, _rb.velocity.y, _moveDirection.z * movementSpeed);
-            
+            _animator.SetBool(IsJumping,false);
+
         }
         else if (!_isGrounded)
         {
             // Air movement
             _rb.velocity = new Vector3(_moveDirection.x * movementSpeed, _rb.velocity.y, _moveDirection.z * movementSpeed);
-            if (_rb.velocity.y < 0)
+            if (_rb.velocity.y < -0.1f && !_isGrounded)
             {
                 // Falling
-                _animator.SetBool(IsJumping,false);
                 _rb.velocity += Vector3.up * (Physics.gravity.y * (airMultiplier - 1) * Time.deltaTime);
             }
         }

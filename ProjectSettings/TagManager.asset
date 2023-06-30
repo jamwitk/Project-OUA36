@@ -6,6 +6,7 @@ TagManager:
   tags:
   - checkpoint
   - bullet
+  - Dragable
   layers:
   - Default
   - TransparentFX

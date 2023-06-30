@@ -1,13 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public enum CameraStyle
-{
-    Basic,
-    Combat
-}
 public class ThirdPersonCam : MonoBehaviour
 {
     public Transform orientation;
@@ -15,12 +6,13 @@ public class ThirdPersonCam : MonoBehaviour
     public Transform player;
     public Transform playerObject;
     public float rotationSpeed;
-    public CameraStyle currentStyle;
     public GameObject basicCam;
     public GameObject combatCam;
     public GameObject cross;
+    private PlayerController _playerController;
     private void Start()
     {
+        _playerController = PlayerController.Instance;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -35,11 +27,14 @@ public class ThirdPersonCam : MonoBehaviour
             combatCam.SetActive(true);
             var dirToCombatOrientation =  combatOrientation.position - new Vector3(transform.position.x, combatOrientation.position.y, transform.position.z);
             orientation.forward = dirToCombatOrientation.normalized;
+            _playerController.SetState(CurrentState.Aiming);
             //playerObject.forward = dirToCombatOrientation.normalized;
             //playerObject.forward = Vector3.Slerp(playerObject.forward, inputDir.normalized, rotationSpeed * Time.deltaTime * rotationSpeed);
+            
         }
         else
         {
+            _playerController.SetState(CurrentState.Normal);
             basicCam.transform.position = combatCam.transform.position;
             cross.SetActive(false);
             basicCam.SetActive(true);
