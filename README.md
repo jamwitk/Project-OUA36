@@ -21,10 +21,10 @@ Wezzy adlı büyücümüz ormanda yaşayan ve artık büyücülük hayatındaki 
 
 
 ## Ürün Özellikleri
-Macera oyunu
-Bulmaca çözme
-Büyülü tema 
-Anlaşılabilir hikaye
+- Macera oyunu
+- Bulmaca çözme
+- Büyülü tema 
+- Anlaşılabilir hikaye
     
 ## Hedef Kitle
 Her yaşta macera oyunlarına ve oyunlarda bulmacalar çözmeye ilgi duyanlar, büyü ve büyücü konseptleri hoşuna giden oyun sever herkese hitap eden bir oyundur.
@@ -62,3 +62,26 @@ Ekran görüntüleri:
 Oyun konusu, hikayesi, ara sahneler, karakterler belirlendi.büyücü modeli yapıldı, büyü kitabı modeli ve animasyonu bitti. Oyun içerisinde level design oluşturulmaya başlandı, karakterin hareketleri sağlandı. Katılımcılar: Tüm ekip
 ## Sprint Retrospective:
 2.spinte daha çok gayret ve çaba gösterlmesi kararı alındı, modelleme ve yazılım kısımlarında hızlanılması gerekildiği, günlük toplantılar için olabildiğince katılım sağlama, iş bölümlemelerinin daha dengeli olması, finaller yüzünden herkes çok odaklanamadığı için 2.sprit içerisinde bu açığımızı kapatmak üzerine kararlar alındı.
+---
+##SPRİNT 2
+#Sprint Board Update
+
+resim
+
+## Sprint Notları:
+Product backlogların içerisinde user storyler okunabilmektedir. Ek olarak kullanılacak linkler de içlerine yazıldı.
+
+## Sprint içinde tamamlanması tahmin edilen puan:
+110 Puan 
+
+## Puan Tamamlama Mantığı: 
+Toplamda proje boyunca 300 puanlık backlog bulunmaktadır. İlk sprint için tamamlanmasını beklediğimiz backlog 100 puanlıkı ama 90 puan yaptığımız ve açığımızı kapatmak için ikinci sprint içerisinde 100 puan olması gereken puanı 110 yapmaya karar verildi.
+## Backlog düzeni ve Story seçimleri:
+Backloglar ilk sprinte göre daha çok kod ağrılıklı olması ve oynanabilirlik üzerine düzenlendi ve ilk sprintteki ilerlediğimiz plan üzeirnden sürece devam edildi.
+
+## Daily Scrum:
+Daily Scrum toplantılarımız genel olarak Discord ve Whatsapp üzerinden zamansal sebeplerden dolayı hem sesli hem mesaj olarak süreç boyunca ilerlemiştir.
+ https://docs.google.com/document/d/15d6q0cZefiA-DUNQPOYKELL8HnMiQj-_/edit?usp=sharing&ouid=102302724524538820380&rtpof=true&sd=true
+ 
+ ##Ürün Durumu
+
