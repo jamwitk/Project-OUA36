@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: b7d475eae91ea7b4f9f7d07e4720116a
+guid: c850482f1d8fb1d44aa2e77e7cbdae9e
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: phong2
+    second: {fileID: 2100000, guid: c2d01ff8858c5c548a3581f4ea0eb39e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -31,69 +36,11 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: First Door
-      takeName: Icosphere.008|Icosphere.008Action.002
-      internalID: -8818664679243866807
-      firstFrame: 0
-      lastFrame: 100
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Second Door
-      takeName: Icosphere.010|Icosphere.010Action
-      internalID: 888221403069410874
-      firstFrame: 0
-      lastFrame: 80
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 100
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -146,7 +93,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 100
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

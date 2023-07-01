@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
     private Camera _camera;
     private Transform _nonEmptyDraggedObject;
     private float draggedDistance = 12f;
-
+    private Rigidbody _draggedRb;
     private void Update()
     {
         //hit.collider.transform.position = Vector3.Lerp(hit.collider.transform.position, ray.GetPoint(10f), Time.deltaTime * 10f);
@@ -53,12 +53,22 @@ public class PlayerController : MonoBehaviour
                         lineRenderer.SetPosition(0, asaUcu.transform.position);
                         lineRenderer.SetPosition(1, hit.point);
                         _nonEmptyDraggedObject = hit.collider.transform;
+                        if (hit.collider.TryGetComponent(out Rigidbody rb))
+                        {
+                            _draggedRb = rb;
+                            rb.isKinematic = true;
+                        }
                         hit.collider.transform.position = Vector3.Lerp(_nonEmptyDraggedObject.position, ray.GetPoint(draggedDistance), Time.deltaTime * 10f);
                         hit.collider.transform.rotation = Quaternion.Lerp(_nonEmptyDraggedObject.rotation, Quaternion.Euler(0,0,0), Time.deltaTime * 10f);
                     }
                     else
                     {
-                        //drop the object 
+                        //drop the object
+                        if (_draggedRb != null)
+                        {
+                            _draggedRb.isKinematic = false;
+                            _draggedRb = null;
+                        }
                         lineRenderer.SetPosition(0, Vector3.zero);
                         lineRenderer.SetPosition(1, Vector3.zero);
                         _nonEmptyDraggedObject = null;
@@ -66,6 +76,11 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 {
+                    if (_draggedRb != null)
+                    {
+                        _draggedRb.isKinematic = false;
+                        _draggedRb = null;
+                    }
                     lineRenderer.SetPosition(0, Vector3.zero);
                     lineRenderer.SetPosition(1, Vector3.zero);
                     _nonEmptyDraggedObject = null;
@@ -73,6 +88,11 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
+                if (_draggedRb != null)
+                {
+                    _draggedRb.isKinematic = false;
+                    _draggedRb = null;
+                }
                 lineRenderer.SetPosition(0, Vector3.zero);
                 lineRenderer.SetPosition(1, Vector3.zero);
                 _nonEmptyDraggedObject = null;
