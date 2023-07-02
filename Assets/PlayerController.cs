@@ -58,7 +58,10 @@ public class PlayerController : MonoBehaviour
                             _draggedRb = rb;
                             rb.isKinematic = true;
                         }
-                        hit.collider.transform.position = Vector3.Lerp(_nonEmptyDraggedObject.position, ray.GetPoint(draggedDistance), Time.deltaTime * 10f);
+                        if(hit.collider.name.Contains("rock"))
+                            hit.collider.transform.position = Vector3.Lerp(_nonEmptyDraggedObject.position, ray.GetPoint(draggedDistance) - Vector3.up, Time.deltaTime * 10f);
+                        else if(hit.collider.name.Contains("kutuk"))                            
+                            hit.collider.transform.position = Vector3.Lerp(_nonEmptyDraggedObject.position, ray.GetPoint(draggedDistance), Time.deltaTime * 10f);
                         hit.collider.transform.rotation = Quaternion.Lerp(_nonEmptyDraggedObject.rotation, Quaternion.Euler(0,0,0), Time.deltaTime * 10f);
                     }
                     else

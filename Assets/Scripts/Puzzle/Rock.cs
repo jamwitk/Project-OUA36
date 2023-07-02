@@ -13,6 +13,8 @@ public class Rock : MonoBehaviour
             if (placeName == gameObject.name.Split('-')[1])
             {
                 other.gameObject.GetComponent<PuzzlePlace>().Done();
+                gameObject.tag = "Untagged";
+                Destroy(gameObject.GetComponent<Rigidbody>());
                 //done
             }
         }
@@ -30,4 +32,5 @@ public class Rock : MonoBehaviour
             }
         }
     }
+
 }

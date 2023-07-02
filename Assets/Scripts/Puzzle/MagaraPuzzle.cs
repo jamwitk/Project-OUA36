@@ -13,6 +13,7 @@ namespace Puzzle
         }
         public PuzzleState State { get; set; }
         public string Name { get; set; }
+        public int rocksCount = 5;
         private int _rockCounter = 0;
         public bool IsDone()
         {
@@ -30,7 +31,7 @@ namespace Puzzle
             State = PuzzleState.Done;
             print("Magara Puzzle Done");
             doorAnimator.SetTrigger("FirstDoor");
-            //TODO: KAPI ACILACAK
+            //TODO: 
             //animation? 
             //sound?
             //particle?
@@ -39,7 +40,7 @@ namespace Puzzle
         {
             _rockCounter++;
             print("rock counter: " + _rockCounter);
-            if (_rockCounter == 3)
+            if (_rockCounter == rocksCount)
             {
                 Done();
             }
