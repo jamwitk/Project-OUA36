@@ -61,12 +61,15 @@ Ekran görüntüleri:
 ## Sprint Review: 
 Oyun konusu, hikayesi, ara sahneler, karakterler belirlendi.büyücü modeli yapıldı, büyü kitabı modeli ve animasyonu bitti. Oyun içerisinde level design oluşturulmaya başlandı, karakterin hareketleri sağlandı. Katılımcılar: Tüm ekip
 ## Sprint Retrospective:
-2.spinte daha çok gayret ve çaba gösterlmesi kararı alındı, modelleme ve yazılım kısımlarında hızlanılması gerekildiği, günlük toplantılar için olabildiğince katılım sağlama, iş bölümlemelerinin daha dengeli olması, finaller yüzünden herkes çok odaklanamadığı için 2.sprit içerisinde bu açığımızı kapatmak üzerine kararlar alındı.
+2.spinte daha çok gayret ve çaba gösterlmesi kararı alındı, modelleme ve yazılım kısımlarında hızlanılması gerekildiği, günlük toplantılar için olabildiğince katılım sağlama, iş bölümlemelerinin daha dengeli olması, finaller yüzünden herkes çok odaklanamadığı için 2.sprit içerisinde bu açığımızı kapatmak üzerine kararlar alındı
 ---
 ##SPRİNT 2
-#Sprint Board Update
+---
+## Sprint Board Update
 
-resim
+<img src="https://github.com/jamwitk/Project-OUA36/assets/119537892/4b98bde0-f718-4f19-9b36-be3a0a92e00b" alt="alt text" width="800" height="600">
+
+
 
 ## Sprint Notları:
 Product backlogların içerisinde user storyler okunabilmektedir. Ek olarak kullanılacak linkler de içlerine yazıldı.
@@ -82,8 +85,13 @@ Backloglar ilk sprinte göre daha çok kod ağrılıklı olması ve oynanabilirl
 ## Daily Scrum:
 Daily Scrum toplantılarımız genel olarak Discord ve Whatsapp üzerinden zamansal sebeplerden dolayı hem sesli hem mesaj olarak süreç boyunca ilerlemiştir.
  https://docs.google.com/document/d/15d6q0cZefiA-DUNQPOYKELL8HnMiQj-_/edit?usp=sharing&ouid=102302724524538820380&rtpof=true&sd=true
+## Ürün Durumu:
+<img src="https://github.com/jamwitk/Project-OUA36/assets/119537892/051719b5-4803-4351-aff2-8ba9f1d3a7f3" alt="alt text" width="800" height="600">
+<img src="https://github.com/jamwitk/Project-OUA36/assets/119537892/4064cc54-3141-40da-8de8-77fde16f78da" alt="alt text" width="800" height="600">
+<img src="https://github.com/jamwitk/Project-OUA36/assets/119537892/c19858f0-4ea9-4df3-94b8-b624385efb49" alt="alt text" width="800" height="600">
 
 ## Sprint Review: 
 Oyun içerisinde bulunacak bulmaca oluşturuldu, mağara modeli yapıldı, karakterin animasyonları eklendi, asa entegrasyonu ayarlandı, kütük modeli yapıldı, karakter skill özellikleri eklendi. Katılımcılar: Tüm ekip
+
 ## Sprint Retrospective:
-3.Sprintte ikinici sprinte göre işleri daha fazla bölümleyeceğimize, ilk hafta bitiminde artık oyunumuzun sonuna gelinmesi gerektiğine karar verdik. İletişimimizin biraz düştüğüne bu yüzdden 3.sprint boyunca çoğunlukla sesli toplantılarda görüşüleceğine karar verildi. 3.sprintte daha temiz ve zaman odaklı gidilmesine karar verildi.
+3.Sprintte ikinici sprinte göre işleri daha fazla bölümleyeceğimize, ilk hafta bitiminde artık oyunumuzun sonuna gelinmesi gerektiğine karar verdik. Kısıtlı zaman içerisinde etkili iletişim kurmak için 3.sprint boyunca çoğunlukla sesli toplantılarda görüşüleceğine karar verildi. 3.sprintte daha temiz ve zaman odaklı gidilmesine karar verildi.
