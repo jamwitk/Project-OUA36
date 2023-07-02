@@ -25,6 +25,17 @@ public class PlayerMovement : MonoBehaviour
     private static readonly int IsWalking = Animator.StringToHash("isWalking");
     private static readonly int IsJumping = Animator.StringToHash("isJumping");
 
+
+    public float SkillCD = 0;
+    public float EffectCD = 0;
+    public ParticleSystem FirstOne;
+    public ParticleSystem SecondOne;
+
+
+    
+
+
+
     private void Start()
     {
         _rb = GetComponent<Rigidbody>();
@@ -33,6 +44,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        SkillCD -= Time.deltaTime*1f;
+        EffectCD -= Time.deltaTime * 1f;
+
+
         _isGrounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, groundMask);
         MyInput();
         SpeedControl();
@@ -68,6 +83,28 @@ public class PlayerMovement : MonoBehaviour
             Jump();
             _canJump = false;
             ResetJump();
+        }
+
+        if (SkillCD <= 0)
+        {
+            StartCoroutine(Skillx());
+        }
+        else
+        {
+            Debug.Log("Skill hazýr degil");
+            _animator.SetBool("IsSpelling", false);
+        }
+
+        if(EffectCD>=0)
+        {
+            FirstOne.Play();
+            SecondOne.Play();
+        }
+        else
+        {
+            FirstOne.Stop();
+            SecondOne.Stop();
+            
         }
     }
 
@@ -123,5 +160,21 @@ public class PlayerMovement : MonoBehaviour
     private void ResetJump()
     {
         _canJump = true;
+    }
+
+    private IEnumerator Skillx()
+    {
+        
+        Debug.Log("Skill hazýr");
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            _animator.SetBool("IsSpelling", true);
+            
+            yield return new WaitForSeconds(2f);
+            EffectCD = 10;
+            SkillCD = 30;
+            
+        }
     }
 }
