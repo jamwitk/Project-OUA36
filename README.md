@@ -82,6 +82,8 @@ Backloglar ilk sprinte göre daha çok kod ağrılıklı olması ve oynanabilirl
 ## Daily Scrum:
 Daily Scrum toplantılarımız genel olarak Discord ve Whatsapp üzerinden zamansal sebeplerden dolayı hem sesli hem mesaj olarak süreç boyunca ilerlemiştir.
  https://docs.google.com/document/d/15d6q0cZefiA-DUNQPOYKELL8HnMiQj-_/edit?usp=sharing&ouid=102302724524538820380&rtpof=true&sd=true
- 
- ##Ürün Durumu
 
+## Sprint Review: 
+Oyun içerisinde bulunacak bulmaca oluşturuldu, mağara modeli yapıldı, karakterin animasyonları eklendi, asa entegrasyonu ayarlandı, kütük modeli yapıldı, karakter skill özellikleri eklendi. Katılımcılar: Tüm ekip
+## Sprint Retrospective:
+3.Sprintte ikinici sprinte göre işleri daha fazla bölümleyeceğimize, ilk hafta bitiminde artık oyunumuzun sonuna gelinmesi gerektiğine karar verdik. İletişimimizin biraz düştüğüne bu yüzdden 3.sprint boyunca çoğunlukla sesli toplantılarda görüşüleceğine karar verildi. 3.sprintte daha temiz ve zaman odaklı gidilmesine karar verildi.
