@@ -74,13 +74,12 @@ Oyun konusu, hikayesi, ara sahneler, karakterler belirlendi.büyücü modeli yap
 ## Sprint Notları:
 Product backlogların içerisinde user storyler okunabilmektedir. Ek olarak kullanılacak linkler de içlerine yazıldı.
 
-## Sprint içinde tamamlanması tahmin edilen puan:
-110 Puan 
+## Sprint içinde tamamlanması tahmin edilen puan: 110 Puan 
 
 ## Puan Tamamlama Mantığı: 
 Toplamda proje boyunca 300 puanlık backlog bulunmaktadır. İlk sprint için tamamlanmasını beklediğimiz backlog 100 puanlıkı ama 90 puan yaptığımız ve açığımızı kapatmak için ikinci sprint içerisinde 100 puan olması gereken puanı 110 yapmaya karar verildi.
 ## Backlog düzeni ve Story seçimleri:
-Backloglar ilk sprinte göre daha çok kod ağrılıklı olması ve oynanabilirlik üzerine düzenlendi ve ilk sprintteki ilerlediğimiz plan üzeirnden sürece devam edildi.
+Backloglar ilk sprintteki ilerlediğimiz plan üzeirnden sürece devam edildi. Yaptığımız toplantılarda da ekstra çıkacak olan işler üzerine düzenlenerek ilerlendi.
 
 ## Daily Scrum:
 Daily Scrum toplantılarımız genel olarak Discord ve Whatsapp üzerinden zamansal sebeplerden dolayı hem sesli hem mesaj olarak süreç boyunca ilerlemiştir.
