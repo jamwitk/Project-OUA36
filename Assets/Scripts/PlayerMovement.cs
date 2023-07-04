@@ -91,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            Debug.Log("Skill hazýr degil");
+            Debug.Log("Skill hazÄ±r degil");
             _animator.SetBool("IsSpelling", false);
         }
 
@@ -165,7 +165,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator Skillx()
     {
         
-        Debug.Log("Skill hazýr");
+        Debug.Log("Skill hazÃ½r");
 
         if (Input.GetKeyDown(KeyCode.F))
         {
