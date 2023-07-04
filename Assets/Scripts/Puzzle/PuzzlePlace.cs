@@ -6,6 +6,8 @@ using UnityEngine;
 public class PuzzlePlace : MonoBehaviour
 {
     public GameObject symbol;
+    public AudioClip Ses;
+    
     public void Done()
     {
         MagaraPuzzle.Instance.PlaceRockCounter();
@@ -13,6 +15,7 @@ public class PuzzlePlace : MonoBehaviour
         //TODO:
         //animation?
         //sound?
+        AudioSource.PlayClipAtPoint(Ses, transform.position);
         //particle?
     }
 
