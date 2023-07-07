@@ -14,12 +14,12 @@ public class HighlightButton : MonoBehaviour, IPointerExitHandler, IPointerEnter
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        pb.GetComponent<Image>().enabled = true;
+        pb.GetComponent<RawImage>().enabled = true;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        pb.GetComponent<Image>().enabled = false;
+        pb.GetComponent<RawImage>().enabled = false;
     }
     
 }
