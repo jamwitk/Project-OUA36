@@ -15,8 +15,10 @@ public class PlayerController : MonoBehaviour
     public static PlayerController Instance;
     private Transform _defaultAsa;
     public LineRenderer lineRenderer;
+    public Health playerHealth;
     private void Start()
     {
+        playerHealth = GetComponent<Health>();
         _camera = Camera.main;
         _defaultAsa = asa.transform;
     }

@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
 {
     [Tooltip("Oyuna kaç can ile başlayacağı / Maksimum canı")]
     [SerializeField] private int maxHealth;
+
     public int CurrentHealth { get; private set; }
     public bool IsDead { get; private set; }
     
@@ -28,6 +29,8 @@ public class Health : MonoBehaviour
          Debug.Log(gameObject.name + " damaged " + damageAmount + "hp");
      }
 
+    
+
      //Can verme
      public void GiveHealth(int healthAmount)
      {
@@ -39,6 +42,11 @@ public class Health : MonoBehaviour
 
          CurrentHealth += healthAmount;
          Debug.Log(gameObject.name + " healed " + healthAmount + "hp");
+     }
+
+     public int GetMaxHealth()
+     {
+         return maxHealth;
      }
 
      private void Die()
