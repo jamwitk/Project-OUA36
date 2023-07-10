@@ -37,11 +37,9 @@ public class PlayerController : MonoBehaviour
     private Rigidbody _draggedRb;
     private void Update()
     {
-        //hit.collider.transform.position = Vector3.Lerp(hit.collider.transform.position, ray.GetPoint(10f), Time.deltaTime * 10f);
 
         if (_currentState == CurrentState.Aiming)
         {
-            //shoot drag and drop
 
             var ray = _camera.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0));
             if (Physics.Raycast(ray, out var hit, 1000f))
@@ -49,10 +47,8 @@ public class PlayerController : MonoBehaviour
 
                 if (hit.collider.CompareTag("Dragable"))
                 {
-                    //drag the object but make the ray.GetPoint() dynamic that it will be change with mousewheel scroll
                     if (Input.GetMouseButton(0))
                     {
-                        //draw a line to the object
                         lineRenderer.SetPosition(0, asaUcu.transform.position);
                         lineRenderer.SetPosition(1, hit.point);
                         _nonEmptyDraggedObject = hit.collider.transform;

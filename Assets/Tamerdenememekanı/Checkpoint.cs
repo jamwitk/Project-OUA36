@@ -4,39 +4,16 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    Vector3 spawnpoint;
-    public static bool dead = false;
+    Vector3 _spawnpoint;
 
     void Start()
     {
-        spawnpoint = gameObject.transform.position;
+        _spawnpoint = gameObject.transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    public Vector3 GetSpawnPoint()
     {
-        if (dead == true)
-        {
-            Respawn();
-        }
-
-        if (gameObject.transform.position.y <= -10f)
-        {
-            Respawn();
-        }
+        return _spawnpoint;
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "checkpoint")
-        {
-            spawnpoint = other.gameObject.transform.position;
-        }
-    }
-
-    void Respawn()
-    {
-        gameObject.transform.position = spawnpoint;
-        dead = false;
-    }
+    
 }
