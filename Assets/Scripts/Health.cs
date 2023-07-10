@@ -15,7 +15,6 @@ public class Health : MonoBehaviour
      private void Start()
      {
          CurrentHealth = maxHealth;
-         TakeDamage(10);
      }
 
      //Can alma
