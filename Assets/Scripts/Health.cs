@@ -49,9 +49,11 @@ public class Health : MonoBehaviour
          return maxHealth;
      }
 
-     private void Die()
+     public void Die()
      {
          //Ölünce ne olacağını buraya yazın.
+         var pos = CheckpointManager.Instance.GetLastCheckpoint();
+         gameObject.transform.position = pos;
          IsDead = true;
          Debug.Log(gameObject.name + " dead.");
      }

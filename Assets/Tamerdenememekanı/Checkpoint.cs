@@ -4,16 +4,24 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    Vector3 _spawnpoint;
-
+    private Vector3 _spawnPoint;
+    private bool _isTaken = false;
     void Start()
     {
-        _spawnpoint = gameObject.transform.position;
+        _spawnPoint = gameObject.transform.position;
     }
 
+    public bool IsTaken()
+    {
+        return _isTaken;
+    }
+    public void Taken()
+    {
+        _isTaken = true;
+    }
     public Vector3 GetSpawnPoint()
     {
-        return _spawnpoint;
+        return _spawnPoint;
     }
     
 }
