@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     public NavMeshAgent agent;
     private Transform player;
     public LayerMask whatIsGround, whatIsPlayer;
-   
+
     public Animator anim;
     public float reloadtime = 5f;
 
@@ -19,65 +19,49 @@ public class Enemy : MonoBehaviour
     public GameObject projectile;
     public Transform firePoint;
     public float projectileSpeed;
-   
-
-
 
 
     public bool seen = false;
 
     //Attacking
     public float timeBetweenAttacks;
+
     bool alreadyAttacked;
     // public GameObject projectile;
 
     //States
-    public float sightRange, attackRange,AreaRange;
+    public float sightRange, attackRange, AreaRange;
     public bool playerInSightRange, playerInAttackRange;
+
     private void Awake()
     {
-
-
-        
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
-
     }
 
     private void Update()
     {
-        if(!isDead)
+        if (!isDead)
         {
             playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
             playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
 
 
-
             if ((playerInSightRange && !playerInAttackRange) || (seen && !playerInAttackRange)) ChasePlayer();
             if ((playerInAttackRange)) AttackPlayer();
         }
-        
-       
     }
 
     private void ChasePlayer()
     {
-
         Debug.Log("Following");
         anim.SetBool("walk", true);
         anim.SetBool("attack", false);
         agent.SetDestination(player.position);
-
-
-
-
     }
+
     private void AttackPlayer()
     {
-
-
-
-
         //Make sure enemy doesn't move
 
 
@@ -87,7 +71,7 @@ public class Enemy : MonoBehaviour
 
         if (!alreadyAttacked)
         {
-            if(!isDead)
+            if (!isDead)
             {
                 ///Attack code here
                 // Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
@@ -114,16 +98,13 @@ public class Enemy : MonoBehaviour
                 Invoke(nameof(ResetAttack), timeBetweenAttacks);
             }
         }
-            
-
     }
 
     private void ResetAttack()
     {
-
-
         alreadyAttacked = false;
     }
+
     public void Damage(float amount)
     {
         if (!isDead) // Kontrol ekle
