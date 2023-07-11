@@ -46,14 +46,18 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        if(!isDead)
+        {
+            playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
+            playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
+
+
+
+            if ((playerInSightRange && !playerInAttackRange) || (seen && !playerInAttackRange)) ChasePlayer();
+            if ((playerInAttackRange)) AttackPlayer();
+        }
         
-        playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
-        playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
-
-
-
-        if ((playerInSightRange && !playerInAttackRange) || (seen && !playerInAttackRange)) ChasePlayer();
-        if ((playerInAttackRange)) AttackPlayer();
+       
     }
 
     private void ChasePlayer()
@@ -83,30 +87,34 @@ public class Enemy : MonoBehaviour
 
         if (!alreadyAttacked)
         {
-            ///Attack code here
-            // Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-            /// rb.AddForce(transform.forward * 60f, ForceMode.Impulse);
-            // rb.AddForce(transform.up * 3.5f, ForceMode.Impulse);
-            //anim.SetBool("walking", false);
-            // anim.SetTrigger("ates");
+            if(!isDead)
+            {
+                ///Attack code here
+                // Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
+                /// rb.AddForce(transform.forward * 60f, ForceMode.Impulse);
+                // rb.AddForce(transform.up * 3.5f, ForceMode.Impulse);
+                //anim.SetBool("walking", false);
+                // anim.SetTrigger("ates");
 
 
-            Vector3 direction = (player.transform.position - firePoint.position).normalized;
-            direction.y = 0f;
-            GameObject bullet = Instantiate(projectile, firePoint.position, Quaternion.identity);
-            Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
-            bulletRigidbody.velocity = direction * projectileSpeed;
-           
+                Vector3 direction = (player.transform.position - firePoint.position).normalized;
+                direction.y = 0f;
+                GameObject bullet = Instantiate(projectile, firePoint.position, Quaternion.identity);
+                Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
+                bulletRigidbody.velocity = direction * projectileSpeed;
 
-            anim.SetBool("attack", true);
-            anim.SetBool("walk", false);
-            seen = true;
 
-            ///End of attack code
-            // Destroy(rb.gameObject, 2f);
-            alreadyAttacked = true;
-            Invoke(nameof(ResetAttack), timeBetweenAttacks);
+                anim.SetBool("attack", true);
+                anim.SetBool("walk", false);
+                seen = true;
+
+                ///End of attack code
+                // Destroy(rb.gameObject, 2f);
+                alreadyAttacked = true;
+                Invoke(nameof(ResetAttack), timeBetweenAttacks);
+            }
         }
+            
 
     }
 
