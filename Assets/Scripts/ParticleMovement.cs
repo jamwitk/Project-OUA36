@@ -5,6 +5,9 @@ using UnityEngine;
 public class ParticleMovement : MonoBehaviour
 {
     private bool collided;
+    public GameObject ImpactVFXTOPLAYER;
+    public GameObject ImpactVFXTOENEMY;
+
 
     private void Start()
     {
@@ -18,6 +21,8 @@ public class ParticleMovement : MonoBehaviour
             Health playerHealth = collision.gameObject.GetComponent<Health>();
             if (playerHealth != null)
             {
+                var impact = Instantiate(ImpactVFXTOPLAYER, collision.contacts[0].point, Quaternion.identity) as GameObject;
+                Destroy(impact, 1.5f);
                 playerHealth.TakeDamage(10);
                 // Rakibin Playere vurdugu dmg
             }
@@ -29,6 +34,8 @@ public class ParticleMovement : MonoBehaviour
             Enemy enemyHealth = collision.gameObject.GetComponent<Enemy>();
             if (enemyHealth != null)
             {
+                var impact = Instantiate(ImpactVFXTOENEMY, collision.contacts[0].point, Quaternion.identity) as GameObject;
+                Destroy(impact, 1.5f);
                 enemyHealth.Damage(20);
                 // Playerin rakibe vurdugu dmg
             }

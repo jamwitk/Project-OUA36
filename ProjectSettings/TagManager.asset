@@ -8,6 +8,7 @@ TagManager:
   - bullet
   - Dragable
   - PuzzlePlace
+  - Enemy
   layers:
   - Default
   - TransparentFX
