@@ -11,6 +11,11 @@ public class ShootingParticle : MonoBehaviour
     public Transform firepoint;
     public float projectilespeed;
 
+    private bool isActionActive = false;
+
+    private float Attacktime;
+    public float FireRate;
+
     void Start()
     {
         
@@ -19,15 +24,36 @@ public class ShootingParticle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetMouseButtonDown(1))
         {
-            Shooting();
+            
+            StartAction();
+        }
+
+        if (Input.GetMouseButtonUp(1))
+        {
+
+            StopAction();
+        }
+        if (isActionActive==true)
+        {
+            
+            if(Input.GetKeyDown(KeyCode.E))
+            {
+                if(Time.time>=Attacktime)
+                {
+                    Attacktime = Time.time + 1 / FireRate;
+                    Shooting();
+
+                }
+
+            }
         }
     }
 
     void Shooting()
     {
-        Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        var ray = cam.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f,0) );
         RaycastHit hit;
         if(Physics.Raycast(ray,out hit))
         {
@@ -36,7 +62,7 @@ public class ShootingParticle : MonoBehaviour
         }
         else
         {
-            destination = ray.GetPoint(1000);
+            destination = ray.GetPoint(50);
         }
         InstantiateProjectile(firepoint);
     }
@@ -44,5 +70,15 @@ public class ShootingParticle : MonoBehaviour
     {
         var Obj = Instantiate(projectile, firepointx.position, Quaternion.identity) as GameObject;
         Obj.GetComponent<Rigidbody>().velocity = (destination - firepoint.position).normalized * projectilespeed;
+    }
+
+    void StartAction()
+    {
+        isActionActive = true;
+    }
+
+    void StopAction()
+    {
+        isActionActive = false;
     }
 }

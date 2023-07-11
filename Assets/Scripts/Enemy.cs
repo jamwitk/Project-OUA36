@@ -8,14 +8,21 @@ public class Enemy : MonoBehaviour
     public NavMeshAgent agent;
     private Transform player;
     public LayerMask whatIsGround, whatIsPlayer;
-    // public bool dead = false;
+   
     public Animator anim;
     public float reloadtime = 5f;
 
     public float health;
 
+    private bool isDead = false;
 
-    
+    public GameObject projectile;
+    public Transform firePoint;
+    public float projectileSpeed;
+   
+
+
+
 
     public bool seen = false;
 
@@ -26,13 +33,12 @@ public class Enemy : MonoBehaviour
 
     //States
     public float sightRange, attackRange,AreaRange;
-    public bool playerInSightRange, playerInAttackRange,PlayerinAttackArea;
-
+    public bool playerInSightRange, playerInAttackRange;
     private void Awake()
     {
 
 
-
+        
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
 
@@ -40,14 +46,14 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        
         playerInSightRange = Physics.CheckSphere(transform.position, sightRange, whatIsPlayer);
         playerInAttackRange = Physics.CheckSphere(transform.position, attackRange, whatIsPlayer);
-        PlayerinAttackArea = Physics.CheckSphere(transform.position, AreaRange, whatIsPlayer);
 
 
 
-        if ((playerInSightRange && !playerInAttackRange && !PlayerinAttackArea) || (seen && !playerInAttackRange && !PlayerinAttackArea)) ChasePlayer();
-        if ((playerInAttackRange) || (seen && PlayerinAttackArea)) AttackPlayer();
+        if ((playerInSightRange && !playerInAttackRange) || (seen && !playerInAttackRange)) ChasePlayer();
+        if ((playerInAttackRange)) AttackPlayer();
     }
 
     private void ChasePlayer()
@@ -83,7 +89,15 @@ public class Enemy : MonoBehaviour
             // rb.AddForce(transform.up * 3.5f, ForceMode.Impulse);
             //anim.SetBool("walking", false);
             // anim.SetTrigger("ates");
-            Debug.Log("Attacked");
+
+
+            Vector3 direction = (player.transform.position - firePoint.position).normalized;
+            direction.y = 0f;
+            GameObject bullet = Instantiate(projectile, firePoint.position, Quaternion.identity);
+            Rigidbody bulletRigidbody = bullet.GetComponent<Rigidbody>();
+            bulletRigidbody.velocity = direction * projectileSpeed;
+           
+
             anim.SetBool("attack", true);
             anim.SetBool("walk", false);
             seen = true;
@@ -104,15 +118,24 @@ public class Enemy : MonoBehaviour
     }
     public void Damage(float amount)
     {
+        if (!isDead) // Kontrol ekle
+        {
+            health -= amount;
+            seen = true;
 
-        health -= amount;
-        seen = true;
-
-        if (health <= 0) Invoke(nameof(DestroyEnemy), 0f);
+            if (health <= 0)
+            {
+                isDead = true; // Ölüm durumunu iþaretle
+                Invoke(nameof(DestroyEnemy), 0f);
+            }
+        }
     }
 
     private void DestroyEnemy()
     {
-        Destroy(gameObject, 2.5f);
+        anim.SetTrigger("die");
+        anim.SetBool("attack", false);
+        anim.SetBool("walk", false);
+        Destroy(gameObject, 2f);
     }
 }
