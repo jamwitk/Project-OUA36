@@ -15,10 +15,10 @@ public class ShootingParticle : MonoBehaviour
 
     private float Attacktime;
     public float FireRate;
-
+    AudioSource audio;
     void Start()
     {
-        
+        audio= GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -40,7 +40,10 @@ public class ShootingParticle : MonoBehaviour
             
             if(Input.GetKeyDown(KeyCode.E))
             {
-                if(Time.time>=Attacktime)
+                audio.Play();
+
+
+                if (Time.time>=Attacktime)
                 {
                     Attacktime = Time.time + 1 / FireRate;
                     Shooting();

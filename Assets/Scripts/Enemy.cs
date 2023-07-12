@@ -19,6 +19,8 @@ public class Enemy : MonoBehaviour
     public GameObject projectile;
     public Transform firePoint;
     public float projectileSpeed;
+    AudioSource audioSource;
+
 
 
     public bool seen = false;
@@ -37,6 +39,7 @@ public class Enemy : MonoBehaviour
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -90,11 +93,14 @@ public class Enemy : MonoBehaviour
 
                 anim.SetBool("attack", true);
                 anim.SetBool("walk", false);
-                seen = true;
+                seen = true;  
+
 
                 ///End of attack code
                 // Destroy(rb.gameObject, 2f);
                 alreadyAttacked = true;
+                audioSource.Play();
+
                 Invoke(nameof(ResetAttack), timeBetweenAttacks);
             }
         }
@@ -107,6 +113,7 @@ public class Enemy : MonoBehaviour
 
     public void Damage(float amount)
     {
+
         if (!isDead) // Kontrol ekle
         {
             health -= amount;
@@ -122,6 +129,7 @@ public class Enemy : MonoBehaviour
 
     private void DestroyEnemy()
     {
+
         anim.SetTrigger("die");
         anim.SetBool("attack", false);
         anim.SetBool("walk", false);
