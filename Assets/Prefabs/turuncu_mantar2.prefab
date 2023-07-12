@@ -92,7 +92,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3125908099556235474}
-  - component: {fileID: 5669107084604681012}
+  - component: {fileID: 6014174613582418555}
+  - component: {fileID: 7441534378160116375}
   m_Layer: 0
   m_Name: turuncu_mantar2
   m_TagString: Untagged
@@ -117,20 +118,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &5669107084604681012
-MeshCollider:
+--- !u!135 &6014174613582418555
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2317845786158727784}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 2
+  m_Radius: 10.604395
+  m_Center: {x: 0, y: 10.104395, z: 0}
+--- !u!114 &7441534378160116375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2317845786158727784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4688f37ab9541094da435cba2aa3e590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valueOfEffect: 10
+  mushroomType: 1
 --- !u!1 &6076730499322370095
 GameObject:
   m_ObjectHideFlags: 0
