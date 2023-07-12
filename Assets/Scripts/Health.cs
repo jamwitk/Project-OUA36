@@ -23,6 +23,7 @@ public class Health : MonoBehaviour
          if (damageAmount >= CurrentHealth && !IsDead)
          {
              Die();
+             CurrentHealth = 0;
              return;
          }
          CurrentHealth -= damageAmount;
@@ -56,5 +57,7 @@ public class Health : MonoBehaviour
          gameObject.transform.position = pos;
          IsDead = true;
          Debug.Log(gameObject.name + " dead.");
+         CurrentHealth = GetMaxHealth();
+         Debug.Log(gameObject.name + " resurrected.");
      }
 }

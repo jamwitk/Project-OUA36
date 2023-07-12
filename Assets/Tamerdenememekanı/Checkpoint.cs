@@ -8,7 +8,8 @@ public class Checkpoint : MonoBehaviour
     private bool _isTaken = false;
     void Start()
     {
-        _spawnPoint = gameObject.transform.position;
+        var tempSpawnPoint = gameObject.transform.position;
+        _spawnPoint = tempSpawnPoint + Vector3.up;
     }
 
     public bool IsTaken()

@@ -11,40 +11,44 @@ public class ParticleMovement : MonoBehaviour
 
     private void Start()
     {
-        Destroy(this.gameObject, 2f);
+        Destroy(gameObject, 2f);
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if((collision.gameObject.tag == "Player" && !collided))
-            {
-            collided = true;
-            Health playerHealth = collision.gameObject.GetComponent<Health>();
-            if (playerHealth != null)
-            {
-                var impact = Instantiate(ImpactVFXTOPLAYER, collision.contacts[0].point, Quaternion.identity) as GameObject;
-                Destroy(impact, 1.5f);
-                playerHealth.TakeDamage(10);
-                // Rakibin Playere vurdugu dmg
-            }
-            Destroy(gameObject);
-        }
-        else if((collision.gameObject.tag == "Enemy" && !collided))
+        switch (collision.gameObject.tag)
         {
-            collided = true;
-            Enemy enemyHealth = collision.gameObject.GetComponent<Enemy>();
-            if (enemyHealth != null)
+            case "Player" when !collided:
             {
-                var impact = Instantiate(ImpactVFXTOENEMY, collision.contacts[0].point, Quaternion.identity) as GameObject;
-                Destroy(impact, 1.5f);
-                enemyHealth.Damage(20);
-                // Playerin rakibe vurdugu dmg
+                collided = true;
+                var playerHealth = collision.gameObject.GetComponent<Health>();
+                if (playerHealth != null)
+                {
+                    var impact = Instantiate(ImpactVFXTOPLAYER, collision.contacts[0].point, Quaternion.identity) as GameObject;
+                    Destroy(impact, 1.5f);
+                    playerHealth.TakeDamage(10);
+                    // Rakibin Playere vurdugu dmg
+                }
+                Destroy(gameObject);
+                break;
             }
-            Destroy(gameObject);
-        }
-        else
-        {
-            collided = true;
-            Destroy(gameObject);
+            case "Enemy" when !collided:
+            {
+                collided = true;
+                var enemyHealth = collision.gameObject.GetComponent<Enemy>();
+                if (enemyHealth != null)
+                {
+                    var impact = Instantiate(ImpactVFXTOENEMY, collision.contacts[0].point, Quaternion.identity) as GameObject;
+                    Destroy(impact, 1.5f);
+                    enemyHealth.Damage(20);
+                    // Playerin rakibe vurdugu dmg
+                }
+                Destroy(gameObject);
+                break;
+            }
+            default:
+                collided = true;
+                Destroy(gameObject);
+                break;
         }
     }
 }

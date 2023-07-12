@@ -35,7 +35,7 @@ public class ShootingParticle : MonoBehaviour
 
             StopAction();
         }
-        if (isActionActive==true)
+        if (isActionActive)
         {
             
             if(Input.GetKeyDown(KeyCode.E))
@@ -58,15 +58,7 @@ public class ShootingParticle : MonoBehaviour
     {
         var ray = cam.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f,0) );
         RaycastHit hit;
-        if(Physics.Raycast(ray,out hit))
-        {
-            destination = hit.point;
-            
-        }
-        else
-        {
-            destination = ray.GetPoint(50);
-        }
+        destination = Physics.Raycast(ray,out hit) ? hit.point : ray.GetPoint(50);
         InstantiateProjectile(firepoint);
     }
     void InstantiateProjectile(Transform firepointx)

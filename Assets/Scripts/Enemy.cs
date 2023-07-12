@@ -76,14 +76,6 @@ public class Enemy : MonoBehaviour
         {
             if (!isDead)
             {
-                ///Attack code here
-                // Rigidbody rb = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Rigidbody>();
-                /// rb.AddForce(transform.forward * 60f, ForceMode.Impulse);
-                // rb.AddForce(transform.up * 3.5f, ForceMode.Impulse);
-                //anim.SetBool("walking", false);
-                // anim.SetTrigger("ates");
-
-
                 Vector3 direction = (player.transform.position - firePoint.position).normalized;
                 direction.y = 0f;
                 GameObject bullet = Instantiate(projectile, firePoint.position, Quaternion.identity);
@@ -113,7 +105,6 @@ public class Enemy : MonoBehaviour
 
     public void Damage(float amount)
     {
-
         if (!isDead) // Kontrol ekle
         {
             health -= amount;
@@ -129,7 +120,6 @@ public class Enemy : MonoBehaviour
 
     private void DestroyEnemy()
     {
-
         anim.SetTrigger("die");
         anim.SetBool("attack", false);
         anim.SetBool("walk", false);

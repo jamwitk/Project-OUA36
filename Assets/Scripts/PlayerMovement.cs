@@ -32,6 +32,10 @@ public class PlayerMovement : MonoBehaviour
     public ParticleSystem SecondOne;
 
 
+    private bool _isAreaSkillThrowing;
+    [SerializeField] private int spellDamage;
+
+
     
 
 
@@ -91,7 +95,6 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            Debug.Log("Skill hazır degil");
             _animator.SetBool("IsSpelling", false);
         }
 
@@ -129,8 +132,9 @@ public class PlayerMovement : MonoBehaviour
                 _rb.velocity += Vector3.up * (Physics.gravity.y * (airMultiplier - 1) * Time.deltaTime);
             }
         }
-          
         
+
+
     }
 
     private void SpeedControl()
@@ -164,17 +168,28 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator Skillx()
     {
-        
-        Debug.Log("Skill hazýr");
-
         if (Input.GetKeyDown(KeyCode.F))
         {
             _animator.SetBool("IsSpelling", true);
-            
+            Spell_AreaDamage();
             yield return new WaitForSeconds(2f);
+            _isAreaSkillThrowing = false;
             EffectCD = 10;
             SkillCD = 30;
             
+        }
+    }
+
+    private void Spell_AreaDamage()
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, 6f);
+        foreach (var hitCollider in hitColliders)
+        {
+            var enemy = hitCollider.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.Damage(spellDamage);
+            }
         }
     }
 }
