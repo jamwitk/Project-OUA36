@@ -23,6 +23,7 @@ public class Checkpoint : MonoBehaviour
     public Vector3 GetSpawnPoint()
     {
         return _spawnPoint;
-    }
+        
+}
     
 }

@@ -15,9 +15,11 @@ public class CheckpointCollider : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Spawnenemys.spawned = true;
             if(_checkpoint.GetComponent<Checkpoint>().IsTaken()) return;
             CheckpointManager.Instance.AddCheckpoint(_checkpoint.GetComponent<Checkpoint>());
             _checkpoint.GetComponent<Checkpoint>().Taken();
+            
         }
     }
 }
