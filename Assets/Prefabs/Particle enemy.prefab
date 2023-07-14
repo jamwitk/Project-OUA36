@@ -217,8 +217,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edefcda58b55406478ae98711782d4fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ImpactVFXTOPLAYER: {fileID: 6382664855060459840, guid: 61f36867ca47087488b93d9fbd59560b, type: 3}
-  ImpactVFXTOENEMY: {fileID: 5517858832659958849, guid: e8beb8b40c2a307499d8feffee78cd67, type: 3}
+  ImpactVFXTOPLAYER: {fileID: 5517858832659958849, guid: e8beb8b40c2a307499d8feffee78cd67, type: 3}
+  ImpactVFXTOENEMY: {fileID: 6382664855060459840, guid: 61f36867ca47087488b93d9fbd59560b, type: 3}
 --- !u!1 &9135383698362725473
 GameObject:
   m_ObjectHideFlags: 0
