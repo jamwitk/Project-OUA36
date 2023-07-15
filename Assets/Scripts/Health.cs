@@ -10,9 +10,8 @@ public class Health : MonoBehaviour
     [SerializeField] private int maxHealth;
 
     public int CurrentHealth { get; private set; }
-    public bool IsDead { get; private set; }
-    
-     private void Start()
+
+    private void Start()
      {
          CurrentHealth = maxHealth;
      }
@@ -20,10 +19,10 @@ public class Health : MonoBehaviour
      //Can alma
      public void TakeDamage(int damageAmount)
      {
-         if (damageAmount >= CurrentHealth && !IsDead)
+         if (damageAmount >= CurrentHealth)
          {
-             Die();
              CurrentHealth = 0;
+             Die();
              return;
          }
          CurrentHealth -= damageAmount;
@@ -55,7 +54,6 @@ public class Health : MonoBehaviour
          //Ölünce ne olacağını buraya yazın.
          var pos = CheckpointManager.Instance.GetLastCheckpoint();
          gameObject.transform.position = pos;
-         IsDead = true;
          Debug.Log(gameObject.name + " dead.");
          CurrentHealth = GetMaxHealth();
          Debug.Log(gameObject.name + " resurrected.");
