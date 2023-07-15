@@ -20,6 +20,14 @@ public class Rock : MonoBehaviour
         }
     }
 
+    private void LateUpdate()
+    {
+        if (transform.position.y < -10f)
+        {
+            transform.position = new Vector3(transform.position.x, 10, transform.position.z);
+        }
+    }
+
     private void OnCollisionExit(Collision other)
     {
         if (other.gameObject.CompareTag("PuzzlePlace"))

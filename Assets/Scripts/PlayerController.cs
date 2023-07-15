@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
                         }
                         
                         if(hit.collider.name.Contains("rock"))
-                            hit.collider.transform.position = Vector3.Lerp(_nonEmptyDraggedObject.position, ray.GetPoint(draggedDistance) - Vector3.up, Time.deltaTime * 10f);
+                            hit.collider.transform.position = Vector3.Lerp(_nonEmptyDraggedObject.position, ray.GetPoint(draggedDistance), Time.deltaTime * 10f);
                         else if(hit.collider.name.Contains("kutuk"))                            
                             hit.collider.transform.position = Vector3.Lerp(_nonEmptyDraggedObject.position, ray.GetPoint(draggedDistance), Time.deltaTime * 10f);
                         hit.collider.transform.rotation = Quaternion.Lerp(_nonEmptyDraggedObject.rotation, Quaternion.Euler(0,0,0), Time.deltaTime * 10f);
@@ -78,7 +78,9 @@ public class PlayerController : MonoBehaviour
                         lineRenderer.SetPosition(0, Vector3.zero);
                         lineRenderer.SetPosition(1, Vector3.zero);
                         _nonEmptyDraggedObject = null;
-                        hit.collider.GetComponent<WateverVolumeFloater>().enabled = true;
+
+                        if(hit.collider.TryGetComponent(out WateverVolumeFloater wateverVolumeFloater))
+                           wateverVolumeFloater.enabled = true;
                     }
                     else
                     {
