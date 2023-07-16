@@ -100,7 +100,7 @@ Oyun içerisinde bulunacak bulmaca oluşturuldu, mağara modeli yapıldı, karak
 ---
 ## Sprint Board Update
 
-<img src="https://github.com/jamwitk/Project-OUA36/assets/119537892/4b98bde0-f718-4f19-9b36-be3a0a92e00b" alt="alt text" width="800" height="600">
+<img src="https://github.com/jamwitk/Project-OUA36/assets/119537892/423e0f66-845c-402a-b8c0-fde0e4eef09e" alt="alt text" width="800" height="600">
 
 ## Sprint Notları:
 Product backlogların içerisinde user storyler okunabilmektedir. Ek olarak kullanılacak linkler de içlerine yazıldı.
@@ -110,9 +110,14 @@ Product backlogların içerisinde user storyler okunabilmektedir. Ek olarak kull
 Toplamda proje boyunca 300 puanlık backlog bulunmaktadır. İlk sprint için tamamlanmasını beklediğimiz backlog 100 puanlıktır.
 
 ## Backlog düzeni ve Story seçimleri:
-Backlogda ilk olarak önemli olan işlerimizi yapmaya başladık ve ilerledikçe eklemek istediklerimizi yazdık. Bu şekilde ilk seçilenlerle tahmin edilen bir puan oluşturduk ve süreçte bu şekilde ilerledik.
+Backlogda ilk olarak oyunda önemli bitirilecek kısımlara ve trailera odaklandık. Bu şekilde ilk seçilenlerle tahmin edilen bir puan oluşturduk ve süreçte bu şekilde ilerledik.
 ## Daily Scrum:
 Daily Scrum toplantılarımız genel olarak Discord ve Whatsapp üzerinden zamansal sebeplerden dolayı hem sesli hem mesaj olarak süreç boyunca ilerlemiştir.
  https://docs.google.com/document/d/15d6q0cZefiA-DUNQPOYKELL8HnMiQj-_/edit?usp=sharing&ouid=102302724524538820380&rtpof=true&sd=true
 ## Ürün Durumu: 
 Ekran görüntüleri:
+<img src="https://github.com/jamwitk/Project-OUA36/assets/119537892/5048a901-6825-4bb3-a121-5b19db0bb76b" alt="alt text" width="800" height="600">
+<img src="https://github.com/jamwitk/Project-OUA36/assets/119537892/8f7f5a2e-739f-4d43-bf26-618f12ded965" alt="alt text" width="800" height="600">
+<img src="https://github.com/jamwitk/Project-OUA36/assets/119537892/4a2dce5b-a1ef-4cd2-bf70-f4ad202a3854" alt="alt text" width="800" height="600">
+
+
