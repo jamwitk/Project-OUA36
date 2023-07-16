@@ -60,6 +60,7 @@ Ekran görüntüleri:
 
 ## Sprint Review: 
 Oyun konusu, hikayesi, ara sahneler, karakterler belirlendi.büyücü modeli yapıldı, büyü kitabı modeli ve animasyonu bitti. Oyun içerisinde level design oluşturulmaya başlandı, karakterin hareketleri sağlandı. Katılımcılar: Tüm ekip
+
 ## Sprint Retrospective:
 2.spinte daha çok gayret ve çaba gösterlmesi kararı alındı, modelleme ve yazılım kısımlarında hızlanılması gerekildiği, günlük toplantılar için olabildiğince katılım sağlama, iş bölümlemelerinin daha dengeli olması, finaller yüzünden herkes çok odaklanamadığı için 2.sprit içerisinde bu açığımızı kapatmak üzerine kararlar alındı
 ---
@@ -94,3 +95,24 @@ Oyun içerisinde bulunacak bulmaca oluşturuldu, mağara modeli yapıldı, karak
 
 ## Sprint Retrospective:
 3.Sprintte ikinici sprinte göre işleri daha fazla bölümleyeceğimize, ilk hafta bitiminde artık oyunumuzun sonuna gelinmesi gerektiğine karar verdik. Kısıtlı zaman içerisinde etkili iletişim kurmak için 3.sprint boyunca çoğunlukla sesli toplantılarda görüşüleceğine karar verildi. 3.sprintte daha temiz ve zaman odaklı gidilmesine karar verildi.
+
+## SPRİNT 3
+---
+## Sprint Board Update
+
+<img src="https://github.com/jamwitk/Project-OUA36/assets/119537892/4b98bde0-f718-4f19-9b36-be3a0a92e00b" alt="alt text" width="800" height="600">
+
+## Sprint Notları:
+Product backlogların içerisinde user storyler okunabilmektedir. Ek olarak kullanılacak linkler de içlerine yazıldı.
+## Sprint içinde tamamlanması tahmin edilen puan:  100 Puan 
+
+## Puan Tamamlama Mantığı: 
+Toplamda proje boyunca 300 puanlık backlog bulunmaktadır. İlk sprint için tamamlanmasını beklediğimiz backlog 100 puanlıktır.
+
+## Backlog düzeni ve Story seçimleri:
+Backlogda ilk olarak önemli olan işlerimizi yapmaya başladık ve ilerledikçe eklemek istediklerimizi yazdık. Bu şekilde ilk seçilenlerle tahmin edilen bir puan oluşturduk ve süreçte bu şekilde ilerledik.
+## Daily Scrum:
+Daily Scrum toplantılarımız genel olarak Discord ve Whatsapp üzerinden zamansal sebeplerden dolayı hem sesli hem mesaj olarak süreç boyunca ilerlemiştir.
+ https://docs.google.com/document/d/15d6q0cZefiA-DUNQPOYKELL8HnMiQj-_/edit?usp=sharing&ouid=102302724524538820380&rtpof=true&sd=true
+## Ürün Durumu: 
+Ekran görüntüleri:
