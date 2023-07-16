@@ -113,11 +113,15 @@ Toplamda proje boyunca 300 puanlık backlog bulunmaktadır. İlk sprint için ta
 Backlogda ilk olarak oyunda önemli bitirilecek kısımlara ve trailera odaklandık. Bu şekilde ilk seçilenlerle tahmin edilen bir puan oluşturduk ve süreçte bu şekilde ilerledik.
 ## Daily Scrum:
 Daily Scrum toplantılarımız genel olarak Discord ve Whatsapp üzerinden zamansal sebeplerden dolayı hem sesli hem mesaj olarak süreç boyunca ilerlemiştir.
- https://docs.google.com/document/d/15d6q0cZefiA-DUNQPOYKELL8HnMiQj-_/edit?usp=sharing&ouid=102302724524538820380&rtpof=true&sd=true
+https://docs.google.com/document/d/1iKk4ZVY73plSGJ1GZDKY4DKqA6kBDl82mQTkw9ZwmTk/edit?usp=sharing
 ## Ürün Durumu: 
 Ekran görüntüleri:
 <img src="https://github.com/jamwitk/Project-OUA36/assets/119537892/5048a901-6825-4bb3-a121-5b19db0bb76b" alt="alt text" width="800" height="600">
 <img src="https://github.com/jamwitk/Project-OUA36/assets/119537892/8f7f5a2e-739f-4d43-bf26-618f12ded965" alt="alt text" width="800" height="600">
 <img src="https://github.com/jamwitk/Project-OUA36/assets/119537892/4a2dce5b-a1ef-4cd2-bf70-f4ad202a3854" alt="alt text" width="800" height="600">
 
+## sprint review: 
+Bir önceki sprint sonunda planladığımız yenilikleri ggerçekleştirdik. Level tasarımı yapıldı, gerekli olan görsel efektler koyuldu, düşmanların animasyonları yapıldı, ses ve textler atıldı, oyun neredeyse planladığımız gibi son halini aldı. Birden fazla test edildi ve değişiklikler ona göre yapıldı. Geri dönüşlerle de değişikliklerimizi devam ettirdik.
+## sprint retrospective:
+ Bir önceki sprintlerden kalanlar ve belirlenen hedeflerin yapıldığı verimli bir sprint oldu. İlerleyen zamanlarda bir gelişme için backloglara yazılması karar alındı.
 
