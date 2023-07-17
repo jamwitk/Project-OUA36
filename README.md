@@ -5,10 +5,10 @@ Takım Unity 36/ WEZARD
 # Ürün İle İlgili Bilgiler
 
 ## Takım Elemanları
-- Beyza Nur Bayrakdaroğlu: Scrum Master / Product Owner
+- Beyza Nur Bayrakdaroğlu: Scrum Master / Product Owner / Developer
 - Jamshid Abdukarimov: Developer
 - Tamer Molla: Developer
-- Hasan Hüseyin Özkul: 3D Artist / Developer
+- Hasan Hüseyin Özkul: 3D Artist 
 - Havva Çetinkaya: 3D Artist
 
 ## Ürün İsmi
