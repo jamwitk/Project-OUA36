@@ -16,11 +16,11 @@ public class SceneLoader : MonoBehaviour
     IEnumerator LoadSceneAsynchronously(int levelIndex)
     {
         
-        AsyncOperation operation =SceneManager.LoadSceneAsync(levelIndex);
+        AsyncOperation operation = SceneManager.LoadSceneAsync(levelIndex);
         loadingScreen.SetActive(true);
         while (!operation.isDone)
         {
-            loadingBar.value=operation.progress;
+            loadingBar.value = operation.progress;
             yield return null;
         }
     }

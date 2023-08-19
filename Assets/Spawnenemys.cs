@@ -20,7 +20,6 @@ public class Spawnenemys : MonoBehaviour
     {
         if (spawned)
         {
-            
             DestroyPreviousEnemies();
 
             for (int i = 0; i < initialEnemyCount; i++)
@@ -35,12 +34,11 @@ public class Spawnenemys : MonoBehaviour
 
     private void DestroyPreviousEnemies()
     {
-        foreach (GameObject enemy in spawnedEnemies)
+        foreach (GameObject enemyss in spawnedEnemies)
         {
-            Destroy(enemy);
+            Destroy(enemyss);
         }
 
         spawnedEnemies.Clear();
     }
-
 }
