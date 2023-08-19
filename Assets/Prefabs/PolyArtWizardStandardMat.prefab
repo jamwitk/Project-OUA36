@@ -2462,12 +2462,12 @@ MonoBehaviour:
     m_Bits: 256
   anim: {fileID: 3938578216662636042}
   reloadtime: 5
-  health: 100
+  health: 50
   projectile: {fileID: 5630100364159585648, guid: 7305f7ddd61a1b047bdd31e6ddfdc763, type: 3}
   firePoint: {fileID: 4034046102089446828}
   projectileSpeed: 22
   seen: 0
-  timeBetweenAttacks: 1.5
+  timeBetweenAttacks: 2
   sightRange: 18
   attackRange: 13
   AreaRange: 15

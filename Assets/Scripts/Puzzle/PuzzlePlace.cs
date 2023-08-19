@@ -15,7 +15,7 @@ public class PuzzlePlace : MonoBehaviour
         //TODO:
         //animation?
         //sound?
-        AudioSource.PlayClipAtPoint(Ses, transform.position);
+      //  AudioSource.PlayClipAtPoint(Ses, transform.position);
         //particle?
     }
 
