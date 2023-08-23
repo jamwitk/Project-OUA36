@@ -4,8 +4,11 @@ Takım Unity 36/ WEZARD
 
 # Ürün İle İlgili Bilgiler
 
-## Youtube Link:
-https://youtu.be/8aZlpMEG6gw?si=lDN5CXVv0nfpw5wq
+## Youtube 
+
+https://github.com/jamwitk/Project-OUA36/assets/46756449/5416be87-604f-47e9-99f0-7bc22ae16e97
+
+Link:
 
 ## Takım Elemanları
 - Beyza Nur Bayrakdaroğlu: Scrum Master / Product Owner / Developer
