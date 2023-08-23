@@ -4,6 +4,9 @@ Takım Unity 36/ WEZARD
 
 # Ürün İle İlgili Bilgiler
 
+## Youtube Link:
+https://youtu.be/8aZlpMEG6gw?si=lDN5CXVv0nfpw5wq
+
 ## Takım Elemanları
 - Beyza Nur Bayrakdaroğlu: Scrum Master / Product Owner / Developer
 - Jamshid Abdukarimov: Developer
